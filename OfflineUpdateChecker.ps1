@@ -42,12 +42,6 @@
     In this example logs would be created here: C:\Updates\logs\2024\01\Results\ and C:\Updates\logs\2024\01\RunLogs\
     Then logs will be backed up here: \\server01\logs\UpdateScans\2024\01\Computername\
 
-
-    .NOTES
-    Created by: Hydrophobia
-    Created Date: 12.2023
-    
-
     .CHANGELOG
     3.22.2024 - switched script to use parameters rather than editable variables in the script. Simplified some repetative path usage.
     1.3.2024 - Added the ability to copy logs and results to a network location
