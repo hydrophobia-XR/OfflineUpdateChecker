@@ -35,6 +35,6 @@
 # EXAMPLE
 
  Open an administrator powershell terminal and either navigate to the location of the script or copy the full path to the script and run it in the powershell terminal.
- C:\Updates\OfflineUpdateChecker.ps1 -cabpath c:\Updates\wsusscn2.cab -LogBackupPath \\server01\logs\UpdateScans
+ C:\Updates\OfflineUpdateChecker.ps1 -cabpath c:\Updates\wsusscn2.cab -LogBackupPath \\\server01\logs\UpdateScans
  In this example logs would be created here: C:\Updates\logs\2024\01\Results\ and C:\Updates\logs\2024\01\RunLogs\
- Then logs will be backed up here: \\server01\logs\UpdateScans\2024\01\Computername\
+ Then logs will be backed up here: \\\server01\logs\UpdateScans\2024\01\Computername\
