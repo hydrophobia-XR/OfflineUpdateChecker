@@ -1,12 +1,12 @@
 
 <#
 	.NOTES
-	===========================================================================
-	Created on:   	12.2023
-	Created by:   	Hydrophobia
-	Filename:     	OfflineUpdateChecker.ps1
-	Last Modified Date: 3.22.2024
-	===========================================================================
+    ===========================================================================
+    Created on:   	12.2023
+    Created by:   	Hydrophobia
+    Filename:     	OfflineUpdateChecker.ps1
+    Last Modified Date: 3.22.2024
+    ===========================================================================
 
     .DISCLAIMER:
     By using this content you agree to the following: This script may be used for legal purposes only. Users take full responsibility 
@@ -129,12 +129,12 @@ Function Get-CABSignature{
 
 Function Get-MissingUpdates{
     #Create Update Session
-	Write-Log -level INFO -message "Creating Update Session" -logfile $logfile
+    Write-Log -level INFO -message "Creating Update Session" -logfile $logfile
     $UpdatesSession = New-Object -ComObject Microsoft.Update.Session
     $UpdateServiceManager = New-Object -ComObject Microsoft.Update.ServiceManager
     $UpdateService = $UpdateServiceManager.AddScanPackageService("Offline Sync Service",$CabPath, 1)
     #Creating Windows Update Searcher
-	Write-Log -level INFO -message "Creating Windows Update Searcher" -logfile $logfile
+    Write-Log -level INFO -message "Creating Windows Update Searcher" -logfile $logfile
     $UpdateSearcher = $UpdatesSession.CreateUpdateSearcher()
     $UpdateSearcher.ServerSelection = 3
     $UpdateSearcher.ServiceID = $UpdateService.ServiceID.ToString()
@@ -146,7 +146,6 @@ Function Get-MissingUpdates{
     Write-Output "$($Updates.Count) updates missing on $Computer : Run Date $CurrentDate" | Tee-Object -FilePath $ResultLog -Append
 	Write-Log -level INFO -message "$($Updates.Count) updates missing on $Computer : Run Date $CurrentDate" -logfile $logfile
 	#Getting relavant info and outputting to run log, terminal, and results log
-
     Foreach($update in $Updates){
 		Write-Log -level INFO -message "$($update | Select-Object Title, MsrcSeverity, @{ Name = "KBArticleIDs"; Expression = { $_.KBArticleIDs } })" -logfile $logfile
 	}
