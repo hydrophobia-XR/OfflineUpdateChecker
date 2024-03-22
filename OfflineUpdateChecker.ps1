@@ -1,5 +1,13 @@
 
 <#
+	.NOTES
+	===========================================================================
+	Created on:   	12.2023
+	Created by:   	Hydrophobia
+	Filename:     	OfflineUpdateChecker.ps1
+	Last Modified Date: 3.22.2024
+	===========================================================================
+
     .DISCLAIMER:
     By using this content you agree to the following: This script may be used for legal purposes only. Users take full responsibility 
     for any actions performed using this script. The author accepts no liability for any damage caused by this script.  
@@ -26,12 +34,12 @@
 
     .EXAMPLE
     Open an administrator powershell terminal and either navigate to the location of the script or copy the full path to the script and run it in the powershell terminal.
-    C:\Path\to\updatescript\wsusscanner.ps1 -cabpath c:\Updates\wsusscn2.cab
+    C:\Path\to\updatescript\OfflineUpdateChecker.ps1 -cabpath c:\Updates\wsusscn2.cab
     In this example logs would be created here: C:\Path\to\updatescript\2024\01\Results and C:\Path\to\updatescript\2024\01\RunLogs
 
     .EXAMPLE
     Open an administrator powershell terminal and either navigate to the location of the script or copy the full path to the script and run it in the powershell terminal.
-    C:\Updates\wsusscanner.ps1 -cabpath c:\Updates\wsusscn2.cab -LogBackupPath \\server01\logs\UpdateScans
+    C:\Updates\OfflineUpdateChecker.ps1 -cabpath c:\Updates\wsusscn2.cab -LogBackupPath \\server01\logs\UpdateScans
     In this example logs would be created here: C:\Updates\logs\2024\01\Results\ and C:\Updates\logs\2024\01\RunLogs\
     Then logs will be backed up here: \\server01\logs\UpdateScans\2024\01\Computername\
 
@@ -39,7 +47,7 @@
     .NOTES
     Created by: Hydrophobia
     Created Date: 12.2023
-    Last Modified Date: 3.22.2024
+    
 
     .CHANGELOG
     3.22.2024 - switched script to use parameters rather than editable variables in the script. Simplified some repetative path usage.
