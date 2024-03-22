@@ -30,7 +30,7 @@
 
  Open an administrator powershell terminal and either navigate to the location of the script or copy the full path to the script and run it in the powershell terminal.
  C:\Path\to\updatescript\OfflineUpdateChecker.ps1 -cabpath c:\Updates\wsusscn2.cab
- In this example logs would be created here: C:\Path\to\updatescript\2024\01\Results and C:\Path\to\updatescript\2024\01\RunLogs
+ In this example logs would be created here: C:\Path\to\updatescript\Logs\2024\01\Results and C:\Path\to\updatescript\Logs\2024\01\RunLogs
 
 # EXAMPLE
 
