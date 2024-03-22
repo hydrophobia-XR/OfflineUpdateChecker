@@ -17,14 +17,13 @@
 
     .DESCRIPTION
     This script utilizes built in Windows tools and the wsusscn2.cab file provided my Microsoft here: 
-	https://learn.microsoft.com/en-us/windows/win32/wua_sdk/using-wua-to-scan-for-updates-offline
-	to check what updates are missing on a Windows endpoint.
+    https://learn.microsoft.com/en-us/windows/win32/wua_sdk/using-wua-to-scan-for-updates-offline to check what updates are missing on a Windows endpoint.
     The script will both display and log the available updates including: Update Name, Criticality and KB Number. 
     The signing certificate is also verified for the wsusscn2.cab file to help ensure it is valid and from Microsoft to prevent potentially malicious cab files being used. 
     Logs will be generated and added to the directory that the script is run from ex: C:\currentdirectory\logs\year\month\Results and C:\currentdirectory\logs\year\month\RunLogs
 
-	After you have a list of missing updates you can use the Microsoft update catalog to download the patches necessary. 
-	https://www.catalog.update.microsoft.com/Home.aspx
+    After you have a list of missing updates you can use the Microsoft update catalog to download the patches necessary. 
+    https://www.catalog.update.microsoft.com/Home.aspx
 	
     .PARAMETER cabpath
     -cabpath {pathtocabfile}: Enter the path where you are storing the most recent wsusscn2.cab file. it's best to have this file local since it is relatively large.
