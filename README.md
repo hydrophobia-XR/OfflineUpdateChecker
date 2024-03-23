@@ -1,11 +1,3 @@
-# OfflineUpdateChecker
- This is a small script that can be used to check for Windows updates in an air-gapped network or Windows Workstation or Server that has no direct internet connection.
-
-# DISCLAIMER:
-
- By using this content you agree to the following: This script may be used for legal purposes only. Users take full responsibility 
- for any actions performed using this script. The author accepts no liability for any damage caused by this script.  
-
 # DESCRIPTION
 
  This script utilizes built in Windows tools and the wsusscn2.cab file provided my Microsoft here: https://learn.microsoft.com/en-us/windows/win32/wua_sdk/using-wua-to-scan-for-updates ofline to check what updates are missing on a Windows endpoint.
