@@ -18,21 +18,21 @@
 
  This script can also be used with Windows' built in Task Scheduler to automate these scans and all you would have to do is update the wsusscn2.cab file.
 
-# PARAMETER cabpath
+### PARAMETER cabpath
 
  -cabpath {pathtocabfile}: Enter the path where you are storing the most recent wsusscn2.cab file. it's best to have this file local since it is relatively large.
 
-# PARAMETER LogBackupPath
+### PARAMETER LogBackupPath
 
  -LogBackupPath {remotepathtobackuplogs}: if you want to backup your log files to a remote server for consolidation/review use this parameter
 
-# EXAMPLE
+### EXAMPLE
 
  Open an administrator powershell terminal and either navigate to the location of the script or copy the full path to the script and run it in the powershell terminal.
  C:\Path\to\updatescript\OfflineUpdateChecker.ps1 -cabpath c:\Updates\wsusscn2.cab
  In this example logs would be created here: C:\Path\to\updatescript\Logs\2024\01\Results and C:\Path\to\updatescript\Logs\2024\01\RunLogs
 
-# EXAMPLE
+### EXAMPLE
 
  Open an administrator powershell terminal and either navigate to the location of the script or copy the full path to the script and run it in the powershell terminal.
  C:\Updates\OfflineUpdateChecker.ps1 -cabpath c:\Updates\wsusscn2.cab -LogBackupPath \\\server01\logs\UpdateScans
