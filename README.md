@@ -30,3 +30,6 @@
  C:\Updates\OfflineUpdateChecker.ps1 -cabpath c:\Updates\wsusscn2.cab -LogBackupPath \\\server01\logs\UpdateScans
  In this example logs would be created here: C:\Updates\logs\2024\01\Results\ and C:\Updates\logs\2024\01\RunLogs\
  Then logs will be backed up here: \\\server01\logs\UpdateScans\2024\01\Computername\
+
+
+ I like to write little scripts that make SysAdmin lives easier. If you like what I do consider supporting me! https://www.buymeacoffee.com/hydrophobia
